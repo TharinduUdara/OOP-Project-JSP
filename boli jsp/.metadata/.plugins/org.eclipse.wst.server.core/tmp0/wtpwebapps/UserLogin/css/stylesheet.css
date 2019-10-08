@@ -1,0 +1,78 @@
+.left-top-tablewindow{
+	position: absolute;
+    left: 0;
+    top:88px;
+    width: 50%;
+    height: 300px;
+    
+}
+
+.right-top-tablewindow{
+    position: absolute;
+    right: 0;
+    top:88px;
+    width: 50%;
+    height: 300px;
+    
+
+}
+
+.left-bottom-tablewindow{
+	top: 400px;
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 300px;
+    
+}
+
+.right-bottom-tablewindow{
+	top: 400px;
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 300px;
+    
+}
+
+table.minimalistBlack {
+  width: 100%;
+  border-collapse: collapse;
+}
+table.minimalistBlack td, table.minimalistBlack th {
+  border: 1px solid #000000;
+}
+table.minimalistBlack tbody td {
+  font-size: 12px;
+  color: #1C1C1C;
+}
+table.minimalistBlack thead {
+  background: #CFCFCF;
+  background: -moz-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+  background: -webkit-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+  background: linear-gradient(to bottom, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+}
+table.minimalistBlack thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #1C1C1C;
+}
+
+
+.profle-image-box{
+	position: absolute;
+    width: 20%;
+    top: 60px;
+    left: 0px;
+}
+
+.profile-detail-box{
+	width: 40%;
+    position: absolute;
+    right: 40%;
+    top: 60px;
+
+
+}
+
+

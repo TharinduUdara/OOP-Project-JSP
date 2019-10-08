@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Querys>
+
+	
+	<query id="create_student_table">
+        <![CDATA[
+            CREATE TABLE student(
+
+	memberID varchar(10) not null,
+	firstName varchar(20),
+	lastName varchar(20),
+	gender varchar(10) DEFAULT 'Male',
+	address1 varchar(20),
+	address2 varchar(20),
+	city varchar(20),
+	parent_guardian varchar(20),
+	HomeTelephone varchar(10),
+	mobile varchar(10),
+	DOB varchar(20),
+	classes varchar(10),
+	userName varchar(20) not null,
+	password varchar(32) not null,
+	primary key (memberID)
+
+			)
+        ]]>
+	</query>
+	
+	
+	
+	<query id="create_teacher_table">
+        <![CDATA[
+            CREATE TABLE teacher(
+
+	teacherID varchar(10) not null,
+	firstName varchar(20),
+	lastName varchar(20),
+	gender varchar(10) DEFAULT 'Male',
+	address1 varchar(20),
+	address2 varchar(20),
+	city varchar(20),
+	HomeTelephone varchar(10),
+	mobile varchar(10),
+	DOB varchar(20),
+	userName varchar(20),
+	password varchar(32),
+	NIC varchar(20),
+	rClass varchar(10),
+	primary key (teacherID)
+
+			)
+        ]]>
+	</query>
+	
+	
+	<query id="drop_table">
+         <![CDATA[        
+            DROP TABLE IF EXISTS student 
+        ]]>
+	</query>
+	
+		<query id="drop_table1">
+         <![CDATA[        
+            DROP TABLE IF EXISTS teacher 
+        ]]>
+	</query>
+	
+	
+	<query id="insert_student">
+        <![CDATA[
+          	insert into student (memberID, firstName, lastName, gender, address1, address2,city,parent_guardian,HomeTelephone,mobile,DOB,classes,userName,password) 
+          	values (?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?,?,?)
+        ]]>
+	</query>
+	
+	
+		<query id="insert_teacher">
+        <![CDATA[
+          	insert into teacher (teacherID, firstName, lastName, gender, address1, address2,city,HomeTelephone,mobile,DOB,userName,password,NIC,rClass) 
+          	values (?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?,?,?)
+        ]]>
+	</query>
+	
+	
+	<query id="student_by_id">
+         <![CDATA[        
+            select * from student where student.memberID = ?
+        ]]>
+	</query>
+	
+	
+		<query id="student_by_name">
+         <![CDATA[        
+            select * from student where student.firstName = ?
+        ]]>
+	</query>
+	
+	
+		<query id="teacher_by_id">
+         <![CDATA[        
+            select * from teacher where teacher.teacherID = ?
+        ]]>
+	</query>
+	
+	
+	<query id="all_students">
+         <![CDATA[        
+            select * from student
+        ]]>
+	</query>
+	
+	
+		<query id="all_teachers">
+         <![CDATA[        
+            select * from teacher
+        ]]>
+	</query>
+	
+	
+	
+	<query id="remove_student">
+         <![CDATA[        
+            delete from student where student.memberID = ?
+        ]]>
+	</query>
+	
+	
+		<query id="remove_teacher">
+         <![CDATA[        
+            delete from teacher where teacher.teacherID = ?
+        ]]>
+	</query>
+	
+	
+	
+	<query id="update_student">
+         <![CDATA[        
+            update student as s 
+            set s.firstName = ?, s.lastName = ?, s.gender = ?, s.address1 = ?, s.address2 = ?, s.city = ?,s.parent_guardian = ?,s.HomeTelephone = ?,s.mobile = ?,s.DOB = ?,s.classes=?,s.userName = ?,s.password = ? 
+            where s.memberID = ?
+            
+        ]]>
+	</query>
+	
+	
+	
+		<query id="update_teacher">
+         <![CDATA[        
+            update teacher as t 
+            set t.firstName = ?, t.lastName = ?,t.gender = ?, t.address1 = ?, t.address2 = ?, t.city = ?,t.HomeTelephone = ?,t.mobile = ?,t.DOB = ?,t.userName = ?,t.password = ?,t.NIC = ?,t.rClass = ? 
+            where t.teacherID = ?
+            
+        ]]>
+	</query>
+	
+	
+	<query id="student_ids">
+         <![CDATA[        
+            select s.memberID from student as s
+        ]]>
+	</query>
+	
+	
+		<query id="teacher_ids">
+         <![CDATA[        
+            select t.teacherID from teacher as t
+        ]]>
+	</query>
+
+</Querys>
+	
+	
